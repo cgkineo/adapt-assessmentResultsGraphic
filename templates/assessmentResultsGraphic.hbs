@@ -1,0 +1,16 @@
+<div class="component__inner assessmentresultsgraphic__inner">
+
+  {{> component this}}
+
+  <div class="component__widget assessmentresultsgraphic__widget">
+
+    <div class="assessmentresultsgraphic__image-container">
+
+      {{#if resultsGraphic}}
+      <img class="assessmentresultsgraphic__image" src="{{resultsGraphic._src}}" {{#if resultsGraphic.alt}}aria-label="{{resultsGraphic.alt}}"{{else}}aria-hidden="true"{{/if}}>
+      {{/if}}
+    </div>
+
+  </div>
+
+</div>

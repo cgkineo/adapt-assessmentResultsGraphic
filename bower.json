@@ -1,0 +1,20 @@
+{
+  "name": "adapt-assessmentResultsGraphic",
+  "version": "0.0.1",
+  "framework": ">=5",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cgkineo/adapt-assessmentResultsGraphic"
+  },
+  "homepage": "https://github.com/cgkineo/adapt-assessmentResultsGraphic",
+  "issues": "https://github.com/cgkineo/adapt-assessmentResultsGraphic/issues/new",
+  "component" : "assessmentResultsGraphic",
+  "displayName" : "Assessment Results Graphic",
+  "description": "A graphic component that can display a different image depending on whether the associated assessment was passed or failed",
+  "main": "/js/adapt-assessmentResultsGraphic.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-component"
+  ],
+  "license": "GPL-3.0"
+}

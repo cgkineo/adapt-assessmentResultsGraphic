@@ -1,0 +1,26 @@
+    // components.json
+    {
+        "_id": "c-05",
+        "_parentId": "b-05",
+        "_type": "component",
+        "_component": "assessmentResultsGraphic",
+        "_classes": "",
+        "_layout": "right",
+        "_assessmentId": "Assessment 1",
+        "_isVisibleBeforeCompletion": false,
+        "_isOptional": true,
+        "_graphics": {
+            "_assessmentIncomplete": {
+                "alt": "",
+                "_src": ""
+            },
+            "_assessmentPassed": {
+                "alt": "",
+                "_src": ""
+            },
+            "_assessmentFailed": {
+                "alt": "",
+                "_src": ""
+            }
+        }
+    }
