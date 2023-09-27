@@ -15,14 +15,12 @@ export default function AssessmentResultsGraphic(props) {
 
         <div className="assessmentresultsgraphic__image-container">
 
-          {resultsGraphic &&
-          <img
-            className="assessmentresultsgraphic__image"
-            src={resultsGraphic._src}
-            aria-label={resultsGraphic.alt || null}
-            aria-hidden={!resultsGraphic.alt || null}
+          <templates.image {...resultsGraphic}
+            classNamePrefixes={[
+              'component',
+              'assessmentresultsgraphic'
+            ]}
           />
-          }
 
         </div>
 
