@@ -15,7 +15,6 @@ It is expected that most of the time this component will have `_isOptional: true
 Hasn't yet had a properties.schema added and set up - so isn't Adapt Authoring Tool compatible.
 
 ----------------------------
-**Version number:** 0.0.1  
 **Framework versions:** 5+  
 **Author / maintainer:**  Kineo  
 **Accessibility support:** Yes  
