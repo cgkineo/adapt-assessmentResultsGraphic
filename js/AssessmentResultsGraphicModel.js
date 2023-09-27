@@ -40,7 +40,8 @@ class AssessmentResultsGraphicModel extends ComponentModel {
   };
 
   onAssessmentComplete(state) {
-    if (this.get('_assessmentId') === undefined || this.get('_assessmentId') !== state.id) return;
+    if (this.get('_assessmentId') === undefined ||
+        this.get('_assessmentId') !== state.id) return;
 
     this.setResultsGraphic(state);
     this.toggleVisibility(true);
@@ -55,21 +56,14 @@ class AssessmentResultsGraphicModel extends ComponentModel {
   setVisibility() {
     if (!Adapt.assessment) return;
 
-    const isVisibleBeforeCompletion = this.get('_isVisibleBeforeCompletion') || false;
-    const wasVisible = this.get('_isVisible');
-
     const assessmentModel = Adapt.assessment.get(this.get('_assessmentId'));
     if (!assessmentModel || assessmentModel.length === 0) return;
 
     const state = assessmentModel.getState();
-    const isComplete = state.isComplete;
     const isAttemptInProgress = state.attemptInProgress;
-    const attemptsSpent = state.attemptsSpent;
-    const hasHadAttempt = (!isAttemptInProgress && attemptsSpent > 0);
-
-    let isVisible = (isVisibleBeforeCompletion && !isComplete) || hasHadAttempt;
-
-    if (!wasVisible && isVisible) isVisible = false;
+    const isComplete = !isAttemptInProgress && state.isComplete;
+    const isVisibleBeforeCompletion = this.get('_isVisibleBeforeCompletion') || false;
+    const isVisible = isVisibleBeforeCompletion || isComplete;
 
     this.toggleVisibility(isVisible);
   };
@@ -95,9 +89,15 @@ class AssessmentResultsGraphicModel extends ComponentModel {
    * The component can either inherit the assessment's reset type or define its own
    */
   onAssessmentReset(state) {
-    if (this.get('_assessmentId') === undefined || this.get('_assessmentId') !== state.id) return;
+    if (this.get('_assessmentId') === undefined ||
+        this.get('_assessmentId') !== state.id) return;
 
-    this.reset(this.get('_resetType'), true);
+    let resetType = this.get('_resetType');
+    if (!resetType || resetType === 'inherit') {
+      // backwards compatibility - state.resetType was only added in assessment v2.3.0
+      resetType = state.resetType || 'hard';
+    }
+    this.reset(resetType, true);
   };
 
   reset() {
