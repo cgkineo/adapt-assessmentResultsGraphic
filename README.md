@@ -15,8 +15,8 @@ It is expected that most of the time this component will have `_isOptional: true
 Hasn't yet had schemas added and set up, so it isn't Adapt Authoring Tool compatible.
 
 ----------------------------
-**Framework versions:** 5+  
-**Author / maintainer:**  Kineo  
-**Accessibility support:** Yes  
-**RTL support:** Yes  
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 13+14 for macOS/iOS/iPadOS, Opera  
+**Framework versions:** 5+<br>
+**Author / maintainer:**  Kineo<br>
+**Accessibility support:** Yes<br>
+**RTL support:** Yes<br>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 13+14 for macOS/iOS/iPadOS, Opera<br>
