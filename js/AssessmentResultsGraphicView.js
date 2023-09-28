@@ -23,7 +23,6 @@ class AssessmentResultsGraphicView extends ComponentView {
   static get template() {
     return 'assessmentResultsGraphic.jsx';
   };
-
 }
 
 export default AssessmentResultsGraphicView;
