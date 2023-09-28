@@ -3,6 +3,7 @@ import ComponentModel from 'core/js/models/componentModel';
 
 class AssessmentResultsGraphicModel extends ComponentModel {
   init() {
+    this.config = this.get('_graphics');
     this.setDefaultResultsGraphic();
 
     this.listenTo(Adapt, {
@@ -12,10 +13,9 @@ class AssessmentResultsGraphicModel extends ComponentModel {
   };
 
   setDefaultResultsGraphic() {
-    const graphics = this.get('_graphics');
-    if (!graphics._assessmentIncomplete || !graphics._assessmentIncomplete._src) return;
+    if (!this.config._assessmentIncomplete || !this.config._assessmentIncomplete._src) return;
 
-    this.set('resultsGraphic', graphics._assessmentIncomplete);
+    this.set('resultsGraphic', this.config._assessmentIncomplete);
   };
 
   /**
@@ -48,8 +48,7 @@ class AssessmentResultsGraphicModel extends ComponentModel {
   };
 
   setResultsGraphic(state) {
-    const graphics = this.get('_graphics');
-    const selectedGraphic = (state.isPass ? graphics._assessmentPassed : graphics._assessmentFailed);
+    const selectedGraphic = (state.isPass ? this.config._assessmentPassed : this.config._assessmentFailed);
     this.set('resultsGraphic', selectedGraphic);
   };
 
