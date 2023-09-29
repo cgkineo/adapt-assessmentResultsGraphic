@@ -5,7 +5,7 @@
         "url": "git://github.com/cgkineo/adapt-assessmentResultsGraphic.git"
     },
     "framework": ">=5",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "homepage": "https://github.com/cgkineo/adapt-assessmentResultsGraphic",
     "issues": "https://github.com/cgkineo/adapt-assessmentResultsGraphic/issues/new",
     "component": "assessmentResultsGraphic",
