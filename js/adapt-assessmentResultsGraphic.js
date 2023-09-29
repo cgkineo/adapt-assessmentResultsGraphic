@@ -1,12 +1,8 @@
-define([
-  'core/js/adapt',
-  './assessmentResultsGraphicModel',
-  './assessmentResultsGraphicView'
-], function(Adapt, AssessmentResultsGraphicModel, AssessmentResultsGraphicView) {
+import components from 'core/js/components';
+import AssessmentResultsGraphicView from './AssessmentResultsGraphicView';
+import AssessmentResultsGraphicModel from './AssessmentResultsGraphicModel';
 
-  return Adapt.register('assessmentResultsGraphic', {
-    model: AssessmentResultsGraphicModel,
-    view: AssessmentResultsGraphicView
-  });
-
+export default components.register('assessmentResultsGraphic', {
+  view: AssessmentResultsGraphicView,
+  model: AssessmentResultsGraphicModel
 });
