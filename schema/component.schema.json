@@ -23,7 +23,7 @@
           "type": "string",
           "title": "Assessment Name",
           "default": "",
-          "description": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
+          "description": "The unique name of the assessment for which the graphic should be displayed.",
           "_adapt": {
             "translatable": true
           }
