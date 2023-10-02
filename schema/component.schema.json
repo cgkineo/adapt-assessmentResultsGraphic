@@ -1,0 +1,117 @@
+{
+  "$anchor": "assessmentResultsGraphic-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "required": [
+        "_graphics"
+      ],
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "full-width",
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "_assessmentId": {
+          "type": "string",
+          "title": "Assessment Name",
+          "default": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_graphics": {
+          "type": "array",
+          "title": "Graphics",
+          "items": {
+            "type": "object",
+            "properties": {
+              "_assessmentIncomplete": {
+                "type": "object",
+                "title": "Incomplete Graphic",
+                "description": "The graphic to display before the user has completed the assessment. Only applicable if the user can view this component before assessment completion (e.g. if Trickle is disabled).",
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Src",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alternative Text",
+                    "description": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_assessmentPassed": {
+                "type": "object",
+                "title": "Passed Graphic",
+                "description": "The graphic to display if the user passes the assessment",
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Src",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alternative Text",
+                    "description": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              },
+              "_assessmentFailed": {
+                "type": "object",
+                "title": "Failed Graphic",
+                "description": "The graphic to display if the user fails the assessment",
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Src",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alternative Text",
+                    "description": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
