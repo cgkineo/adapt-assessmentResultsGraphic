@@ -43,7 +43,7 @@
               "title": "Incomplete Graphic",
               "description": "The graphic to display before the user has completed the assessment. Only applicable if the user can view this component before assessment completion (e.g. if Trickle is disabled).",
               "properties": {
-                "src": {
+                "_src": {
                   "type": "string",
                   "isObjectId": true,
                   "title": "Src",
@@ -68,7 +68,7 @@
               "title": "Passed Graphic",
               "description": "The graphic to display if the user passes the assessment",
               "properties": {
-                "src": {
+                "_src": {
                   "type": "string",
                   "isObjectId": true,
                   "title": "Src",
@@ -93,7 +93,7 @@
               "title": "Failed Graphic",
               "description": "The graphic to display if the user fails the assessment",
               "properties": {
-                "src": {
+                "_src": {
                   "type": "string",
                   "isObjectId": true,
                   "title": "Src",
