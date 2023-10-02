@@ -12,6 +12,7 @@
     "displayName": "Assessment Results Graphic",
     "description": "A graphic component that can display a different image depending on whether the associated assessment was passed or failed",
     "main": "/js/adapt-assessmentResultsGraphic.js",
+    "targetAttribute": "_assessmentResultsGraphic",
     "keywords": [
         "adapt-plugin",
         "adapt-component"

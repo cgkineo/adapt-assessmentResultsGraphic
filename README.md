@@ -27,7 +27,7 @@ CSS class name(s) to be applied to this component's containing `div`. The class 
 This defines the horizontal position of the component in the block. Acceptable values are `full`, `left` or `right`.
 
 ### \_assessmentId (string):
-The `_assessment._id` of the assessment that corresponds to this component.
+This is the unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.
 
 ### \_graphics (object):
 The object that defines the images to use for each assessment state. It contains the following settings that apply to the `_assessmentIncomplete`, `_assessmentPassed`, and `_assessmentFailed` objects.
