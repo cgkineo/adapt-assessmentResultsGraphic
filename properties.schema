@@ -42,86 +42,82 @@
       "help": "Controls whether this component will be visible or hidden prior to the assessment having been completed."
     },
     "_graphics": {
-      "type": "array",
+      "type": "object",
       "required": true,
       "title": "Graphics",
-      "items": {
-        "type": "object",
-        "required": true,
-        "properties": {
-          "_assessmentIncomplete": {
-            "type": "object",
-            "required": true,
-            "title": "Incomplete Graphic",
-            "help": "The graphic to display before the user has completed the assessment. Only applicable if the user can view this component before assessment completion (e.g. if Trickle is disabled).",
-            "properties": {
-              "_src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "inputType": "Asset:image",
-                "validators": ["required"]
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              }
+      "properties": {
+        "_assessmentIncomplete": {
+          "type": "object",
+          "required": true,
+          "title": "Incomplete Graphic",
+          "help": "The graphic to display before the user has completed the assessment. Only applicable if the user can view this component before assessment completion (e.g. if Trickle is disabled).",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
             }
-          },
-          "_assessmentPassed": {
-            "type": "object",
-            "required": true,
-            "title": "Passed Graphic",
-            "help": "The graphic to display if the user passes the assessment",
-            "properties": {
-              "_src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "inputType": "Asset:image",
-                "validators": ["required"]
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              }
+          }
+        },
+        "_assessmentPassed": {
+          "type": "object",
+          "required": true,
+          "title": "Passed Graphic",
+          "help": "The graphic to display if the user passes the assessment",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
             }
-          },
-          "_assessmentFailed": {
-            "type": "object",
-            "required": true,
-            "title": "Failed Graphic",
-            "help": "The graphic to display if the user fails the assessment",
-            "properties": {
-              "_src": {
-                "type": "string",
-                "required": true,
-                "default": "",
-                "inputType": "Asset:image",
-                "validators": ["required"]
-              },
-              "alt": {
-                "type": "string",
-                "required": false,
-                "default": "",
-                "title": "Alternative Text",
-                "inputType": "Text",
-                "validators": [],
-                "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
-                "translatable": true
-              }
+          }
+        },
+        "_assessmentFailed": {
+          "type": "object",
+          "required": true,
+          "title": "Failed Graphic",
+          "help": "The graphic to display if the user fails the assessment",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
             }
           }
         }
