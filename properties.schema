@@ -32,6 +32,15 @@
       "validators": [],
       "translatable": true
     },
+    "_isVisibleBeforeCompletion": {
+      "type": "boolean",
+      "required": true,
+      "default": true,
+      "title": "Show before assessment completion",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Controls whether this component will be visible or hidden prior to the assessment having been completed."
+    },
     "_graphics": {
       "type": "array",
       "required": true,
