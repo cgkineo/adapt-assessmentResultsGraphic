@@ -26,7 +26,8 @@
       "type": "string",
       "required": true,
       "title": "Assessment Name",
-      "default": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
+      "default": "",
+      "help": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
       "inputType": "Text",
       "validators": [],
       "translatable": true

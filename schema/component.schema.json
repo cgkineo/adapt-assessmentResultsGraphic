@@ -22,7 +22,8 @@
         "_assessmentId": {
           "type": "string",
           "title": "Assessment Name",
-          "default": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
+          "default": "",
+          "description": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank.",
           "_adapt": {
             "translatable": true
           }
