@@ -4,6 +4,8 @@
         "_parentId": "b-05",
         "_type": "component",
         "_component": "assessmentResultsGraphic",
+        "title": "",
+        "displayTitle": "",
         "_classes": "",
         "_layout": "right",
         "_assessmentId": "Assessment 1",
