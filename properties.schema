@@ -1,0 +1,126 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "title": "Aria Region",
+      "default": "A component that shows an image based on the user's assessment score.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "both",
+      "editorOnly": true
+    },
+    "_assessmentId": {
+      "type": "string",
+      "required": true,
+      "title": "Assessment Name",
+      "default": "",
+      "help": "The unique name of the assessment for which the graphic should be displayed.",
+      "inputType": "Text",
+      "validators": []
+    },
+    "_isVisibleBeforeCompletion": {
+      "type": "boolean",
+      "required": true,
+      "default": true,
+      "title": "Show before assessment completion",
+      "inputType": "Checkbox",
+      "validators": [],
+      "help": "Controls whether this component will be visible or hidden prior to the assessment having been completed."
+    },
+    "_graphics": {
+      "type": "object",
+      "required": true,
+      "title": "Graphics",
+      "properties": {
+        "_assessmentIncomplete": {
+          "type": "object",
+          "required": true,
+          "title": "Incomplete Graphic",
+          "help": "The graphic to display before the user has completed the assessment. Only applicable if the user can view this component before assessment completion (e.g. if Trickle is disabled).",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
+            }
+          }
+        },
+        "_assessmentPassed": {
+          "type": "object",
+          "required": true,
+          "title": "Passed Graphic",
+          "help": "The graphic to display if the user passes the assessment",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
+            }
+          }
+        },
+        "_assessmentFailed": {
+          "type": "object",
+          "required": true,
+          "title": "Failed Graphic",
+          "help": "The graphic to display if the user fails the assessment",
+          "properties": {
+            "_src": {
+              "type": "string",
+              "required": true,
+              "default": "",
+              "inputType": "Asset:image",
+              "validators": ["required"]
+            },
+            "alt": {
+              "type": "string",
+              "required": false,
+              "default": "",
+              "title": "Alternative Text",
+              "inputType": "Text",
+              "validators": [],
+              "help": "A description of the image. Required when the image has meaning that must be conveyed to the learner. For 'decorative' images, leave this blank.",
+              "translatable": true
+            }
+          }
+        }
+      }
+    }
+  }
+}
