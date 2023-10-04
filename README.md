@@ -45,11 +45,12 @@ The graphic displayed uses an [aria-label](https://github.com/adaptlearning/adap
 You *must* specify both the failed and passed images. If you don't want to have a different graphic for each of those assessment states, you should probably just be using the standard [Graphic component](https://github.com/adaptlearning/adapt-contrib-graphic).
 
 ## Limitations
-Not Adapt Authoring Tool compatible
+
+No known limitations.
 
 ----------------------------
 **Framework versions:** 5+<br>
 **Author / maintainer:**  Kineo<br>
 **Accessibility support:** Yes<br>
 **RTL support:** Yes<br>
-**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, IE11, Safari 13+14 for macOS/iOS/iPadOS, Opera<br>
+**Cross-platform coverage:** Chrome, Chrome for Android, Firefox (ESR + latest version), Edge, Safari for macOS/iOS/iPadOS, Opera<br>
