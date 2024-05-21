@@ -27,7 +27,7 @@
       "required": true,
       "title": "Assessment Name",
       "default": "",
-      "help": "The unique name of the assessment for which the graphic should be displayed.",
+      "help": "The unique name of the assessment for which the graphic should be displayed. If you only have one assessment, you can leave this blank (the article's assessment ID must also be blank)",
       "inputType": "Text",
       "validators": []
     },
